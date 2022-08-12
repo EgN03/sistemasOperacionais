@@ -1,3 +1,4 @@
 # Sistemas Operacionais
 
-<img scr="https://geekblog.com.br/o-que-e-um-sistema-operacional/>
+<b>Integrantes do grupo:</b> 
+<p>Enrique Granado, Enzo Damato, Gustavo Saad</p> 

@@ -1,2 +1,0 @@
-este arquivo sera lido pelo programa
-e logo depois sera escrito em outro arquivo

@@ -15,10 +15,10 @@ int main(void){
       printf ("\nArquivo? Não há nenhum!\n"); //CHAMADA 2
       exit (EXIT_FAILURE);}
     char arquivo1;
-    while((arquivo1=fgetc(ex1)) != EOF){ //Se o arquivo não tiver mais bytes, getc devolve a constante  EOF.
-    	printf("%c", arquivo1); //CHAMADA 3 
+    while((arquivo1=fgetc(ex1)) != EOF){ //Se o arquivo não tiver mais bytes, getc devolve a constante  EOF. CHAMADA 3
+    	printf("%c", arquivo1); //CHAMADA 4
 	}
-	fclose(ex1);
-	//Ocorrem 3 chamadas de sistemas ao SO. Linhas 8,10 e 14.
+	fclose(ex1); //CHAMADA 5
+	//Ocorrem 5 chamadas de sistemas ao SO. Linhas 13,15,18,19 e 21.
 }
 

@@ -4,10 +4,10 @@
 
 int main() {
 	FILE *fptr;
-	char arquivo[50];
+	char arquivo[100];
+	char arquivoSaida[100];
 	printf("Nome do arquivo que deseja abrir\n");
 	scanf("%s", arquivo);
-	char arquivoSaida[50];
 	printf("Nome do arquivo que deseja escrever\n");
 	scanf("%s", arquivoSaida);
 
@@ -27,6 +27,8 @@ int main() {
 	fread(conteudo, sizeof(char), tamanho, fptr);
     fclose(fptr);
  
-    printf(conteudo); 
+ 	FILE *file;
+ 	file = fopen(arquivoSaida, "w");
+    fprintf(file,"%s" ,conteudo); 
 	return 0;
 }

@@ -1,2 +1,3 @@
 <h1>Ex2 - Cp</h1>
-<p>O programa deve ser compilado no programa Dev C++ e a funcionalidade dele é fazer o comando <b>CP</b> do linux na linguagem C. </p>
+<p>Para o comando funcionar, no prompt de comando deve-se colocar <b>./main</b> e a funcionalidade dele é a de fazer o comando <b>CP</b> do linux na linguagem C.</p>
+

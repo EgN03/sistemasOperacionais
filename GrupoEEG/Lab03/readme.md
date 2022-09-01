@@ -1,7 +1,15 @@
 <h1>Lab02b</h1>
-Ex1 - Criação de Processos:
+<h2><b> Ex1 - Criação de Processos:</b></h2>
 
 ![image](https://user-images.githubusercontent.com/83346303/188031265-8f9cd717-fe54-4e79-b3a1-64902eb0c2a5.png)
+
+<h2><b>Ex2 - fork - pai e filho</b></h2>
+
+![image](https://user-images.githubusercontent.com/83346303/188031434-3d9392c7-9570-46df-bfbe-efca6211497e.png)
+
+
+
+<hr>
 
 <p>1)Rode o programa anterior para valores grandes de n. As
 mensagens sempre estarão ordenadas pelo valor de i?</p>
@@ -9,7 +17,7 @@ mensagens sempre estarão ordenadas pelo valor de i?</p>
 
 ![ex1SO](https://user-images.githubusercontent.com/83346303/187840569-a974f131-7262-4e48-924b-92f2fbde55f1.PNG)
 
-<hr>
+
 <p>2) O que acontece se o programa anterior escreve-se as mensagens para sys.stdout, usando print, ao invés de para sys.stderr?</p>
 <p> O processo com o stdout mostra a saída padrão na inteface com o usuário. Enquanto o stderr mostra uma saída de erro.
 

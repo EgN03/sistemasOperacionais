@@ -1,4 +1,8 @@
 <h1>Lab02b</h1>
+Ex1 - Criação de Processos:
+
+![image](https://user-images.githubusercontent.com/83346303/188031265-8f9cd717-fe54-4e79-b3a1-64902eb0c2a5.png)
+
 <p>1)Rode o programa anterior para valores grandes de n. As
 mensagens sempre estarão ordenadas pelo valor de i?</p>
 <p>Sim! As mensagens sempre estarão ordernadas pelo valor de i. Por conta que ele vai criando os filhos na ordem da execução. </p>

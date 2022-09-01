@@ -1,7 +1,7 @@
 <h1>Lab02b</h1>
 <p>1)Rode o programa anterior para valores grandes de n. As
 mensagens sempre estarão ordenadas pelo valor de i?</p>
-<p>Sim! As mensagens sempre estarão ordernadas pelo valor de i. </p>
+<p>Sim! As mensagens sempre estarão ordernadas pelo valor de i. Por conta que ele vai criando os filhos na ordem da execução. </p>
 
 ![ex1SO](https://user-images.githubusercontent.com/83346303/187840569-a974f131-7262-4e48-924b-92f2fbde55f1.PNG)
 

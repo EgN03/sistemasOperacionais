@@ -5,9 +5,11 @@
 
 <h2><b>Ex2 - fork - pai e filho</b></h2>
 
-![image](https://user-images.githubusercontent.com/83346303/188031434-3d9392c7-9570-46df-bfbe-efca6211497e.png)
+![image](https://user-images.githubusercontent.com/83346303/188031678-cd45c00c-028a-4bd8-8a41-934889f439a3.png)
 
+<h2><b>Ex3- Pegando o Process ID</b></h2>
 
+![image](https://user-images.githubusercontent.com/83346303/188032117-eecf41bf-9f7a-4c15-9791-0aa5bc02d1ab.png)
 
 <hr>
 

@@ -1,8 +1,16 @@
+/* Grupo EEG - 4N
+Enrique Granado 32107803
+Enzo Damato 32125992
+Gustavo Saad 32173091 */
+
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <pthread.h>
 #define F 5 													//numero de threads/filosofos que serão criadas
+
+pthread_mutex_t garfos[F]; 										//alocando a area de memoria compartilhada
+pthread_t filosofos[F]; 										// lista de threads/filosofos
+int ids[F]; 
 
 void pensa(int id){ 											//chamado quando o filosofo nao esta com fome
 	int tempo = (rand()%3 +3);									//faz a thread dormir por um tempo aleatorio de 3 a 6 sec
@@ -28,7 +36,31 @@ void solta_garfos(int* id){										//libera os garfos para o proximo filosofo
 }
 
 
+void* filosofo(void* i){										//"construtor" do filosofo, controla suas acoes
+	int *id = (int*) i;
+	sleep(1);
+	while(1){
+		pensa(*id);
+		pega_garfos(id);
+		come(*id);
+		solta_garfos(id);
+	}
+	
+}
+
 int main (void) {
+	int i;
+	for(i=0;i<F;i++){
+		pthread_mutex_init(&garfos[i],NULL);					//inicializa o espaco de memoria compartilhado
+	}
+	for(i=0;i<F;i++){
+		ids[i]=i;												//cria as threads e informa seus ids
+		pthread_create(&filosofos[i], NULL, &filosofo ,(void *) &ids[i]);
+		printf("sou o #%d a chegar para jantar\n",i);
+	}
+	for(i=0;i<F;i++){											//espera o encerramento das threads
+		pthread_join(filosofos[i],NULL);
+	}
 	
 	return 0;
 }

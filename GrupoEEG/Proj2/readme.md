@@ -1,7 +1,7 @@
 Integrantes: <br>
 Enrique Granado Novaes 32107803 <br>
 Enzo Rocha Damato 32125992<br>
-Gustavo Saad Andrade Maluhy<br>
+Gustavo Saad Andrade Maluhy 32173091<br>
 
 Para Executar o código, execute os comandos a seguir:<br>
 "gcc -pthread -o proj projeto2.c"<br>

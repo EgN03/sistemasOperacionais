@@ -4,26 +4,14 @@ Enrique Granado Novaes 32107803
 Enzo Rocha Damato 32125992
 Gustavo Saad Andrade Maluhy*/
 
-/*#define _GNU_SOURCE
-#include <stdlib.h>
-#include <malloc.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <signal.h>
-#include <sched.h>
-#include <stdio.h>*/
-// 64kB stack
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
 #define THREADS 100
 
-int c1=100, c2=100;
+int c1=100, c2=100, numero_thread[THREADS];
 pthread_mutex_t transf;
 pthread_t transferencias[THREADS];
-int valor;
-// The child thread will execute this function
 
 void *transferencia(void *i)
 {
@@ -45,27 +33,33 @@ void *transferencia(void *i)
 	if (*from >= valor){ // 2
 		*from -= valor;
 		*to += valor;
-		printf("  Transferência concluida com sucesso!\n");
 	}else{
 		printf("Transferência negada!\n");
 	}
 	printf("  Saldo de c1: %d\n", c1);
 	printf("  Saldo de c2: %d\n", c2);
-	printf("Processo finalizado!\n");
 	pthread_mutex_unlock(&transf);
 	return 0;
 }
 
-int main()
+int main(int argc, void* args[])
 {
-	int i;
+	int i ,t=100;
+	if(argc>1){
+		t = atoi(args[1]);
+		if(t>100){
+			t=100;
+		}
+	}
 	pthread_mutex_init(&transf,NULL);					//inicializa o espaco de memoria compartilhado
 	
-	for(i=0;i<THREADS;i++){
-		pthread_create(&transferencias[i], NULL, &transferencia , (void *) &i);
+	for(i=0;i<t;i++){
+		numero_thread[i] = i;
+		pthread_create(&transferencias[i], NULL, &transferencia , (void *) &numero_thread[i]);
 	}
-	for(i=0;i<THREADS;i++){											//espera o encerramento das threads
+	for(i=0;i<t;i++){											//espera o encerramento das threads
 		pthread_join(transferencias[i],NULL);
+		printf("Processo %d finalizado!\n",i);
 	}
 	
 	
